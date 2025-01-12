@@ -1,15 +1,30 @@
 import React from "react";
-// import Component from "./components/Component";
-// import Component2 from "./components/Component2";
-import Component3 from "./components/Component3";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Mobile from "./components/Mobile";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Works from "./pages/Works";
+import Contact from "./pages/Contact";
+import Tech from "./components/Home";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div>
-      {/* <Component /> */}
-      {/* <Component2 /> */}
-      <Component3 />
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Mobile />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/works" element={<Works />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Tech />
+      </div>
+    </Router>
   );
 }
 
