@@ -57,7 +57,7 @@ export default function Home() {
                 </a>
                 <a
                   id="wa-btn"
-                  className="shadow cursor-pointer hover:bg-light inline-flex items-center gap-x-2 rounded-lg border border-light px-6 py-4 font-medium transition border-[1px] focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-gray-1 dark:text-light/70 dark:hover:bg-dark dark:hover:text-white"
+                  className="shadow cursor-pointer hover:bg-light inline-flex items-center gap-x-2 rounded-lg border border-light px-6 py-4 font-medium transition focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-gray-1 dark:text-light/70 dark:hover:bg-dark dark:hover:text-white"
                   href="https://api.whatsapp.com/send?phone=+919403733265&text=Hello,%20I%20want%20to%20send%20you%20a%20message."
                   target="_blank"
                 >
