@@ -120,293 +120,148 @@ export default function Home() {
           </div>
         </app-user-card>
         <div className="grid grid-cols-1 gap-4 lg:gap-6">
+          {/* Work Experience Section */}
           <div className="group rounded-2xl bg-white px-6 pt-0 shadow dark:bg-dark dark:shadow-dark">
             <h2 className="relative bg-white pb-2 pt-6 text-2xl font-semibold dark:bg-dark dark:text-light">
               Work Experience
             </h2>
             <div className="max-h-[250px] space-y-4 overflow-hidden pb-6 pt-4 scrollbar-thin scrollbar-thumb-gray-400 dark:scrollbar-thumb-slate-500 scrollbar-track-transparent">
               <div className="animate-scrollY space-y-4 group-hover:[animation-play-state:paused]">
-                <div className="flex justify-between gap-4">
-                  <p className="flex items-center mt-1 w-1/4 text-sm font-medium text-muted dark:text-light/70">
-                    2022 - 2025
-                  </p>
-                  <div className="w-3/4 flex items-center gap-3">
-                    <div className="grid h-12 w-12 shrink-0 place-content-center rounded-lg bg-white">
-                      <img
-                        className="w-10 mix-blend-multiply rounded object-cover"
-                        alt="logo_image"
-                        src="https://aashish-bhagwat.creativehand.co.in/assets/work_brands/creativehand-logo.png"
-                        title="image"
-                      />
-                    </div>
-                    <div>
-                      <h6 className="text-base font-semibold text-dark dark:text-light/70">
-                        CreativeHand
-                      </h6>
-                      <p className="text-sm text-muted">CTO | Co-Founder</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex justify-between gap-4">
-                  <p className="flex items-center mt-1 w-1/4 text-sm font-medium text-muted dark:text-light/70">
-                    2022 - 2023
-                  </p>
-                  <div className="w-3/4 flex items-center gap-3">
-                    <div className="grid h-12 w-12 shrink-0 place-content-center rounded-lg bg-white">
-                      <img
-                        className="w-10 mix-blend-multiply rounded object-cover"
-                        alt="logo_image"
-                        src="https://www.wipro.com/content/dam/nexus/staticsites/homepage/header/Wipro_Primary%20Logo_Color_RGB.svg"
-                        title="image"
-                      />
-                    </div>
-                    <div>
-                      <h6 className="text-base font-semibold text-dark dark:text-light/70">
-                        Wipro
-                      </h6>
-                      <p className="text-sm text-muted">Full Stack Developer</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex justify-between gap-4">
-                  <p className="flex items-center w-1/4 mt-1 text-sm font-medium text-muted dark:text-light/70">
-                    2017 - 2022
-                  </p>
-                  <div className="w-3/4 flex items-center gap-3">
-                    <div className="grid h-12 w-12 shrink-0 place-content-center rounded-lg bg-white">
-                      <img
-                        className="mix-blend-multiply w-10 rounded object-cover"
-                        alt="brand"
-                        src="https://aashish-bhagwat.creativehand.co.in/assets/work_brands/tudip.png"
-                        title="image"
-                      />
-                    </div>
-                    <div>
-                      <h6 className="text-base font-semibold text-dark dark:text-light/70">
-                        Tudip Technologies
-                      </h6>
-                      <p className="text-sm text-muted">Full Stack Developer</p>
+                {[
+                  {
+                    period: "2022 - 2025",
+                    companyLogo:
+                      "https://aashish-bhagwat.creativehand.co.in/assets/work_brands/creativehand-logo.png",
+                    companyName: "CreativeHand",
+                    role: "CTO | Co-Founder",
+                  },
+                  {
+                    period: "2022 - 2023",
+                    companyLogo:
+                      "https://www.wipro.com/content/dam/nexus/staticsites/homepage/header/Wipro_Primary%20Logo_Color_RGB.svg",
+                    companyName: "Wipro",
+                    role: "Full Stack Developer",
+                  },
+                  {
+                    period: "2017 - 2022",
+                    companyLogo:
+                      "https://aashish-bhagwat.creativehand.co.in/assets/work_brands/tudip.png",
+                    companyName: "Tudip Technologies",
+                    role: "Full Stack Developer",
+                  },
+                ].map((experience, index) => (
+                  <div key={index} className="flex justify-between gap-4">
+                    <p className="flex items-center mt-1 w-1/4 text-sm font-medium text-muted dark:text-light/70">
+                      {experience.period}
+                    </p>
+                    <div className="w-3/4 flex items-center gap-3">
+                      <div className="grid h-12 w-12 shrink-0 place-content-center rounded-lg bg-white">
+                        <img
+                          className="w-10 mix-blend-multiply rounded object-cover"
+                          alt="logo_image"
+                          src={experience.companyLogo}
+                          title="image"
+                        />
+                      </div>
+                      <div>
+                        <h6 className="text-base font-semibold text-dark dark:text-light/70">
+                          {experience.companyName}
+                        </h6>
+                        <p className="text-sm text-muted">{experience.role}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
+
+          {/* Expert Area Section */}
           <div className="rounded-2xl bg-white p-6 shadow dark:bg-dark dark:shadow-dark">
             <h2 className="text-2xl font-semibold dark:text-light">
               My Expert Area
             </h2>
             <div className="mt-6 grid grid-cols-4 gap-4 md:grid-cols-3">
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="Angular"
-                    src="https://cdn.simpleicons.org/angular/dd1100"
-                    title="Angular"
-                  />
+              {[
+                {
+                  name: "Angular",
+                  imgSrc: "https://cdn.simpleicons.org/angular/dd1100",
+                },
+                {
+                  name: "React Js",
+                  imgSrc: "https://cdn.simpleicons.org/react/61DAFB",
+                },
+                {
+                  name: "Node Js",
+                  imgSrc: "https://cdn.simpleicons.org/node.js/5FA04E",
+                },
+                {
+                  name: "Javascript",
+                  imgSrc: "https://cdn.simpleicons.org/javascript/FEC119",
+                },
+                {
+                  name: "Laravel",
+                  imgSrc: "https://cdn.simpleicons.org/laravel/FF2D20",
+                },
+                {
+                  name: "Ionic",
+                  imgSrc: "https://cdn.simpleicons.org/ionic/3880FF",
+                },
+                {
+                  name: "Github",
+                  imgSrc: "https://cdn.simpleicons.org/github/000000",
+                },
+                {
+                  name: "HTML",
+                  imgSrc: "https://cdn.simpleicons.org/html5/E34F26",
+                },
+                {
+                  name: "CSS",
+                  imgSrc: "https://cdn.simpleicons.org/css3/1572B6",
+                },
+                {
+                  name: "JQuery",
+                  imgSrc: "https://cdn.simpleicons.org/jquery/0769AD",
+                },
+                {
+                  name: "Mongo DB",
+                  imgSrc: "https://cdn.simpleicons.org/mongodb/47A248",
+                },
+                {
+                  name: "NGINX",
+                  imgSrc: "https://cdn.simpleicons.org/nginx/009639",
+                },
+                {
+                  name: "PWA",
+                  imgSrc: "https://cdn.simpleicons.org/pwa/5A0FC8",
+                },
+                {
+                  name: "Wordpress",
+                  imgSrc: "https://cdn.simpleicons.org/wordpress/21759B",
+                },
+                {
+                  name: "Figma",
+                  imgSrc: "https://cdn.simpleicons.org/figma/F24E1E",
+                },
+              ].map((tech, index) => (
+                <div key={index} className="text-center">
+                  <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
+                    <img
+                      className="h-8 object-cover"
+                      alt={tech.name}
+                      src={tech.imgSrc}
+                      title={tech.name}
+                    />
+                  </div>
+                  <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
+                    {tech.name}
+                  </p>
                 </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  Angular
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="React Js"
-                    src="https://cdn.simpleicons.org/react/61DAFB"
-                    title="React Js"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  React Js
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="Node Js"
-                    src="https://cdn.simpleicons.org/node.js/5FA04E"
-                    title="Node Js"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  Node Js
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="Javascript"
-                    src="https://cdn.simpleicons.org/javascript/FEC119"
-                    title="Javascript"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  Javascript
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="Laravel"
-                    src="https://cdn.simpleicons.org/laravel/FF2D20"
-                    title="Laravel"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  Laravel
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="Ionic"
-                    src="https://cdn.simpleicons.org/ionic/3880FF"
-                    title="Ionic"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  Ionic
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="Github"
-                    src="https://cdn.simpleicons.org/github/000000"
-                    title="Github"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  Github
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="HTML"
-                    src="https://cdn.simpleicons.org/html5/E34F26"
-                    title="HTML"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  HTML
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="CSS"
-                    src="https://cdn.simpleicons.org/css3/1572B6"
-                    title="CSS"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  CSS
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="JQuery"
-                    src="https://cdn.simpleicons.org/jquery/0769AD"
-                    title="JQuery"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  JQuery
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="Mongo DB"
-                    src="https://cdn.simpleicons.org/mongodb/47A248"
-                    title="Mongo DB"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  Mongo DB
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="NGINX"
-                    src="https://cdn.simpleicons.org/nginx/009639"
-                    title="NGINX"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  NGINX
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="PWA"
-                    src="https://cdn.simpleicons.org/pwa/5A0FC8"
-                    title="PWA"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  PWA
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="Wordpress"
-                    src="https://cdn.simpleicons.org/wordpress/21759B"
-                    title="Wordpress"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  Wordpress
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="grid place-content-center rounded-lg bg-light p-3 dark:bg-dark-2">
-                  <img
-                    className="h-8 object-cover"
-                    alt="Figma"
-                    src="https://cdn.simpleicons.org/figma/F24E1E"
-                    title="Figma"
-                  />
-                </div>
-                <p className="mt-1 text-xs md:text-sm font-medium text-dark dark:text-light/70">
-                  Figma
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
+
         <div className="rounded-2xl bg-white p-6 shadow dark:bg-dark dark:shadow-dark">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <h2 className="text-2xl font-semibold dark:text-light">
@@ -431,197 +286,93 @@ export default function Home() {
               </svg>
             </a>
           </div>
+
           <div className="mt-6 space-y-6">
-            <div className="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0">
-              <div className="relative aspect-6/4 overflow-hidden rounded-t-lg">
-                <img
-                  className="h-full w-full rounded-t-lg object-cover object-top transition"
-                  alt="image"
-                  src="https://aashish-bhagwat.creativehand.co.in/assets/new_projects/indistays_banner.png"
-                  title="image"
-                />
-                <a
-                  className="project-gallery-link absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-white text-primary shadow-lg transition lg:invisible lg:-translate-y-[40%] lg:opacity-0 lg:group-hover:visible lg:group-hover:-translate-y-1/2 lg:group-hover:opacity-100 vbox-item"
-                  href="https://aashish-bhagwat.creativehand.co.in/assets/new_projects/indistays_banner.png"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M10 4.167v11.666M4.167 10h11.666" />
-                  </svg>
-                </a>
-              </div>
-              <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-black/20 p-4">
-                <span className="rounded bg-white px-2 py-1 text-xs font-medium text-primary shadow-sm">
+            {[
+              {
+                imgSrc:
+                  "https://aashish-bhagwat.creativehand.co.in/assets/new_projects/indistays_banner.png",
+                projectLink: "https://indistays.com/home",
+                title: "Indistays",
+                projectUrl:
+                  "https://aashish-bhagwat.creativehand.co.in/assets/new_projects/indistays_banner.png",
+              },
+              {
+                imgSrc:
+                  "https://aashish-bhagwat.creativehand.co.in/assets/new_projects/elev8.png",
+                projectLink: "https://www.e8matrix.com/staging",
+                title: "Elev8 Matrix - US",
+                projectUrl:
+                  "https://aashish-bhagwat.creativehand.co.in/assets/new_projects/elev8.png",
+              },
+              {
+                imgSrc:
+                  "https://aashish-bhagwat.creativehand.co.in/assets/new_projects/frylow_banner.png",
+                projectLink: "https://frylowstore.com/",
+                title: "Frylow Web Store",
+                projectUrl:
+                  "https://aashish-bhagwat.creativehand.co.in/assets/new_projects/frylow_banner.png",
+              },
+              {
+                imgSrc:
+                  "https://aashish-bhagwat.creativehand.co.in/assets/new_projects/infix_banner.png",
+                projectLink: "https://infixlogistics.com/",
+                title: "Infix Logistics | E-commerce",
+                projectUrl:
+                  "https://aashish-bhagwat.creativehand.co.in/assets/new_projects/infix_banner.png",
+              },
+              {
+                imgSrc:
+                  "https://aashish-bhagwat.creativehand.co.in/assets/new_projects/auto_commenter_banner.png",
+                projectLink:
+                  "https://chromewebstore.google.com/detail/linkedin-auto-commenter/pagjldpgebbhhfekjghppoajdmdhbpee",
+                title: "LinkedIn Auto Commenter - Bot",
+                projectUrl:
+                  "https://aashish-bhagwat.creativehand.co.in/assets/new_projects/auto_commenter_banner.png",
+              },
+            ].map((project, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0"
+              >
+                <div className="relative aspect-[6/4] overflow-hidden rounded-t-lg">
+                  <img
+                    className="h-full w-full rounded-t-lg object-cover object-top transition"
+                    alt="image"
+                    src={project.imgSrc}
+                    title="image"
+                  />
                   <a
-                    className="border-b border-transparent text-primary transition hover:border-b-primary hover:text-primary dark:hover:text-primary"
-                    href="https://indistays.com/home"
-                    target="_blank"
+                    className="project-gallery-link absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-white text-primary shadow-lg transition lg:invisible lg:-translate-y-[40%] lg:opacity-0 lg:group-hover:visible lg:group-hover:-translate-y-1/2 lg:group-hover:opacity-100 vbox-item"
+                    href={project.projectUrl}
                   >
-                    Indistays
+                    <svg
+                      className="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M10 4.167v11.666M4.167 10h11.666" />
+                    </svg>
                   </a>
-                </span>
+                </div>
+                <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-black/20 p-4">
+                  <span className="rounded bg-white px-2 py-1 text-xs font-medium text-primary shadow-sm">
+                    <a
+                      className="border-b border-transparent transition hover:border-b-primary hover:text-primary dark:hover:text-primary"
+                      href={project.projectLink}
+                      target="_blank"
+                    >
+                      {project.title}
+                    </a>
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0">
-              <div className="relative aspect-[6/4] overflow-hidden rounded-t-lg">
-                <img
-                  className="h-full w-full rounded-t-lg object-cover object-top transition"
-                  alt="image"
-                  src="https://aashish-bhagwat.creativehand.co.in/assets/new_projects/elev8.png"
-                  title="image"
-                />
-                <a
-                  className="project-gallery-link absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-white text-primary shadow-lg transition lg:invisible lg:-translate-y-[40%] lg:opacity-0 lg:group-hover:visible lg:group-hover:-translate-y-1/2 lg:group-hover:opacity-100 vbox-item"
-                  href="https://aashish-bhagwat.creativehand.co.in/assets/new_projects/elev8.png"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M10 4.167v11.666M4.167 10h11.666" />
-                  </svg>
-                </a>
-              </div>
-              <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-black/20 p-4">
-                <span className="rounded bg-white px-2 py-1 text-xs font-medium text-primary shadow-sm">
-                  <a
-                    className="border-b border-transparent transition hover:border-b-primary hover:text-primary dark:hover:text-primary"
-                    href="https://www.e8matrix.com/staging"
-                    target="_blank"
-                  >
-                    Elev8 Matrix - US
-                  </a>
-                </span>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0">
-              <div className="relative aspect-[6/4] overflow-hidden rounded-t-lg">
-                <img
-                  className="h-full w-full rounded-t-lg object-cover object-top transition"
-                  alt="image"
-                  src="https://aashish-bhagwat.creativehand.co.in/assets/new_projects/frylow_banner.png"
-                  title="image"
-                />
-                <a
-                  className="project-gallery-link absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-white text-primary shadow-lg transition lg:invisible lg:-translate-y-[40%] lg:opacity-0 lg:group-hover:visible lg:group-hover:-translate-y-1/2 lg:group-hover:opacity-100 vbox-item"
-                  href="https://aashish-bhagwat.creativehand.co.in/assets/new_projects/frylow_banner.png"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M10 4.167v11.666M4.167 10h11.666" />
-                  </svg>
-                </a>
-              </div>
-              <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-black/20 p-4">
-                <span className="rounded bg-white px-2 py-1 text-xs font-medium text-primary shadow">
-                  <a
-                    className="border-b border-transparent transition hover:border-b-primary hover:text-primary dark:hover:text-primary"
-                    href="https://frylowstore.com/"
-                    target="_blank"
-                  >
-                    Frylow Web Store
-                  </a>
-                </span>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0">
-              <div className="relative aspect-[6/4] overflow-hidden rounded-t-lg">
-                <img
-                  className="h-full w-full rounded-t-lg object-cover object-top transition"
-                  alt="image"
-                  src="https://aashish-bhagwat.creativehand.co.in/assets/new_projects/infix_banner.png"
-                  title="image"
-                />
-                <a
-                  className="project-gallery-link absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-white text-primary shadow-lg transition lg:invisible lg:-translate-y-[40%] lg:opacity-0 lg:group-hover:visible lg:group-hover:-translate-y-1/2 lg:group-hover:opacity-100 vbox-item"
-                  href="https://aashish-bhagwat.creativehand.co.in/assets/new_projects/infix_banner.png"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M10 4.167v11.666M4.167 10h11.666" />
-                  </svg>
-                </a>
-              </div>
-              <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-black/20 p-4">
-                <span className="rounded bg-white px-2 py-1 text-xs font-medium text-primary shadow">
-                  <a
-                    className="border-b border-transparent transition hover:border-b-primary hover:text-primary dark:hover:text-primary"
-                    href="https://infixlogistics.com/"
-                    target="_blank"
-                  >
-                    Infix Logistics | E-commerce
-                  </a>
-                </span>
-              </div>
-            </div>
-            <div className="group relative overflow-hidden rounded-lg bg-light p-4 pb-0 dark:bg-dark-2 md:p-6 md:pb-0">
-              <div className="relative aspect-[6/4] overflow-hidden rounded-t-lg">
-                <img
-                  className="h-full w-full rounded-t-lg object-cover object-top transition"
-                  alt="image"
-                  src="https://aashish-bhagwat.creativehand.co.in/assets/new_projects/auto_commenter_banner.png"
-                  title="image"
-                />
-                <a
-                  className="project-gallery-link absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-content-center rounded-full bg-white text-primary shadow-lg transition lg:invisible lg:-translate-y-[40%] lg:opacity-0 lg:group-hover:visible lg:group-hover:-translate-y-1/2 lg:group-hover:opacity-100 vbox-item"
-                  href="https://aashish-bhagwat.creativehand.co.in/assets/new_projects/auto_commenter_banner.png"
-                >
-                  <svg
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.5"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M10 4.167v11.666M4.167 10h11.666" />
-                  </svg>
-                </a>
-              </div>
-              <div className="absolute inset-x-0 bottom-0 flex flex-wrap gap-2 bg-gradient-to-t from-black/20 p-4">
-                <span className="rounded bg-white px-2 py-1 text-xs font-medium text-primary shadow-sm">
-                  <a
-                    className="border-b border-transparent transition hover:border-b-primary hover:text-primary dark:hover:text-primary"
-                    href="https://chromewebstore.google.com/detail/linkedin-auto-commenter/pagjldpgebbhhfekjghppoajdmdhbpee"
-                    target="_blank"
-                  >
-                    LinkedIn Auto Commenter - Bot
-                  </a>
-                </span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </main>
