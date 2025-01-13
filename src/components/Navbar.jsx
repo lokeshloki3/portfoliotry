@@ -54,9 +54,9 @@ export default function Navbar() {
             </ul>
           </nav>
 
-          <div className="flex justify-center items-center gap-6 mr-4">
+          <div className="flex justify-center items-center gap-6">
           <a
-            className="inline-flex items-center gap-2 rounded-lg bg-gray-900 px-6 py-4 text-center text-base font-semibold leading-tight text-white transition duration-150 ease-out hover:bg-primary dark:bg-gray-800 dark:text-white dark:hover:bg-primary dark:hover:text-white cursor-pointer"
+            className="hidden items-center gap-2 rounded-lg bg-gray-900 px-6 py-4 text-center text-base font-semibold leading-tight text-white transition duration-150 ease-out hover:bg-primary dark:bg-gray-800 dark:text-white dark:hover:bg-primary dark:hover:text-white cursor-pointer lg:block"
             href="https://lokeshloki3.github.io/resume/Lokesh_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
