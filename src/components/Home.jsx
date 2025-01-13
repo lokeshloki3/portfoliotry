@@ -1,103 +1,12 @@
 import React from "react";
-import { MdOutlineEmail } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
-import { IoIosCall } from "react-icons/io";
-import { FaWhatsapp } from "react-icons/fa";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import Sidecard from "./Sidecard";
 
 export default function Home() {
   return (
     <>
       <main className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6 m-6 border-0 border-solid border-gray-200 box-border text-gray-900">
-        <app-user-card>
-          <div className="right-0 top-[100px] lg:sticky rounded-2xl bg-white p-6 shadow dark:bg-dark dark:shadow-dark">
-            <div className="aspect-6/4 overflow-hidden rounded-lg bg-light text-center dark:bg-dark-2">
-              <img
-                className="dark:hidden inline-block h-full w-full scale-110 object-contain object-bottom"
-                alt="profile_image"
-                src="https://aashish-bhagwat.creativehand.co.in/assets/profile_landscape_ch.png"
-                title="image"
-              />
-            </div>
-            <div className="mt-6">
-              <h1 className="text-2xl font-semibold dark:text-light">
-                Lokesh Walia 👋
-              </h1>
-              <p className="mt-2 text-gray-500 dark:text-light/70">
-                A Passionate{" "}
-                <span className="font-semibold text-gray-900 dark:text-white">
-                  Frontend Developer
-                </span>{" "}
-                🖥️ &{" "}
-                <span className="font-semibold text-gray-900 dark:text-white">
-                  Product Designer
-                </span>{" "}
-                having{" "}
-                <span className="font-semibold text-gray-900 dark:text-white">
-                  2 years
-                </span>{" "}
-                of Experiences in 20+ Technologies so far.
-              </p>
-              <div className="mt-6 flex gap-2">
-                <a
-                  id="call-btn"
-                  className="shadow cursor-pointer inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-primary px-6 py-4 font-medium text-white bg-[#9D95FF] focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50"
-                >
-                  <IoIosCall className="text-lg"/>
-                  <span className="border-0 border-solid border-gray-200 box-border">
-                    Call
-                  </span>
-                </a>
-                <a
-                  id="wa-btn"
-                  className="shadow cursor-pointer hover:bg-light inline-flex items-center gap-x-2 rounded-lg border border-light px-6 py-4 font-medium transition focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-gray-1 dark:text-light/70 dark:hover:bg-dark dark:hover:text-white"
-                  href="https://api.whatsapp.com/send?phone=+919403733265&text=Hello,%20I%20want%20to%20send%20you%20a%20message."
-                  target="_blank"
-                >
-                  <FaWhatsapp className="text-lg"/>
-                </a>
-
-                <button
-                  className="shadow js-clipboard hs-tooltip inline-flex items-center gap-x-2 rounded-lg border border-light bg-transparent px-6 py-4 font-medium text-dark transition [--trigger:focus] hover:bg-light focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-gray-1 dark:text-light/70 dark:hover:bg-dark dark:hover:text-white"
-                  type="button"
-                >
-                  <MdOutlineEmail />
-                  <span>Email</span>
-                </button>
-              </div>
-              <div className="mt-8 flex flex-wrap items-center gap-2">
-                <a
-                  className="shadow flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary"
-                  href="https://github.com/lokeshloki3"
-                  target="_blank"
-                  title="github"
-                >
-                  <FaGithub className="text-xl"/>
-                </a>
-
-                <a
-                  className="shadow flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary"
-                  href="https://www.linkedin.com/in/lokesh021loki/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="LinkedIn"
-                >
-                  <FaLinkedin className="text-xl" />
-                </a>
-                <a
-                  className="shadow flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary"
-                  href="https://leetcode.com/u/lokesh11/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="LinkedIn"
-                >
-                  <SiLeetcode className="text-xl" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </app-user-card>
+        <Sidecard/>
         <div className="grid grid-cols-1 gap-4 lg:gap-6">
           {/* Work Experience Section */}
           <div className="group rounded-2xl bg-white px-6 pt-0 shadow dark:bg-dark dark:shadow-dark">
@@ -108,25 +17,25 @@ export default function Home() {
               <div className="animate-scrollY space-y-4 group-hover:[animation-play-state:paused]">
                 {[
                   {
-                    period: "2022 - 2025",
+                    period: "Dec,2024 - Present",
                     companyLogo:
-                      "https://aashish-bhagwat.creativehand.co.in/assets/work_brands/creativehand-logo.png",
-                    companyName: "CreativeHand",
-                    role: "CTO | Co-Founder",
+                      "https://www.saralgroups.com/static/assets/company-logo.png",
+                    companyName: "Saral Tech",
+                    role: "Web Development Intern",
                   },
                   {
-                    period: "2022 - 2023",
+                    period: "July,2017 - Sept,2018",
                     companyLogo:
-                      "https://www.wipro.com/content/dam/nexus/staticsites/homepage/header/Wipro_Primary%20Logo_Color_RGB.svg",
-                    companyName: "Wipro",
-                    role: "Full Stack Developer",
+                      "https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/300_186_3.png?$568_N_PNG$",
+                    companyName: "Samsung R and D Institues, Noida",
+                    role: "Software Engineer",
                   },
                   {
-                    period: "2017 - 2022",
+                    period: "Dec,2016 - June,2017",
                     companyLogo:
-                      "https://aashish-bhagwat.creativehand.co.in/assets/work_brands/tudip.png",
-                    companyName: "Tudip Technologies",
-                    role: "Full Stack Developer",
+                      "https://images.samsung.com/is/image/samsung/assets/global/about-us/brand/logo/300_186_3.png?$568_N_PNG$",
+                    companyName: "Samsung R and D Institues, Noida",
+                    role: "Software Engg. Trainee",
                   },
                 ].map((experience, index) => (
                   <div key={index} className="flex justify-between gap-4">
@@ -136,7 +45,7 @@ export default function Home() {
                     <div className="w-3/4 flex items-center gap-3">
                       <div className="grid h-12 w-12 shrink-0 place-content-center rounded-lg bg-white">
                         <img
-                          className="w-10 mix-blend-multiply rounded object-cover"
+                          className="w-10 text-lg mix-blend-multiply rounded object-cover"
                           alt="logo_image"
                           src={experience.companyLogo}
                           title="image"
@@ -251,18 +160,7 @@ export default function Home() {
               href="https://aashish-bhagwat.creativehand.co.in/works"
             >
               <span>All Projects</span>
-              <svg
-                className="h-5 w-5"
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M4.167 10h11.666m-4.999 5 5-5m-5-5 5 5" />
-              </svg>
+              <IoIosArrowRoundForward />
             </a>
           </div>
 
