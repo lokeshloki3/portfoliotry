@@ -1,4 +1,10 @@
 import React from "react";
+import { MdOutlineEmail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+import { IoIosCall } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -13,21 +19,15 @@ export default function Home() {
                 src="https://aashish-bhagwat.creativehand.co.in/assets/profile_landscape_ch.png"
                 title="image"
               />
-              <img
-                className="hidden dark:inline-block h-full w-full scale-110 object-contain object-bottom"
-                alt="profile_image"
-                src="https://aashish-bhagwat.creativehand.co.in/assets/profile_landscape_ch_blck.png"
-                title="image"
-              />
             </div>
             <div className="mt-6">
               <h1 className="text-2xl font-semibold dark:text-light">
-                Aashish Bhagwat 👋
+                Lokesh Walia 👋
               </h1>
               <p className="mt-2 text-gray-500 dark:text-light/70">
                 A Passionate{" "}
                 <span className="font-semibold text-gray-900 dark:text-white">
-                  Full Stack Developer
+                  Frontend Developer
                 </span>{" "}
                 🖥️ &{" "}
                 <span className="font-semibold text-gray-900 dark:text-white">
@@ -35,22 +35,16 @@ export default function Home() {
                 </span>{" "}
                 having{" "}
                 <span className="font-semibold text-gray-900 dark:text-white">
-                  7 years
+                  2 years
                 </span>{" "}
                 of Experiences in 20+ Technologies so far.
               </p>
               <div className="mt-6 flex gap-2">
                 <a
                   id="call-btn"
-                  className="shadow cursor-pointer inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-primary px-6 py-4 font-medium text-white transition hover:bg-blue-600 focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50"
+                  className="shadow cursor-pointer inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-primary px-6 py-4 font-medium text-white bg-[#9D95FF] focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50"
                 >
-                  <svg
-                    className="h-6 w-6 fill-none stroke-current stroke-[1.5] stroke-linecap-round stroke-linejoin-round"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Zm10 3a2 2 0 0 1 2 2m-2-6a6 6 0 0 1 6 6" />
-                  </svg>
+                  <IoIosCall className="text-lg"/>
                   <span className="border-0 border-solid border-gray-200 box-border">
                     Call
                   </span>
@@ -61,59 +55,44 @@ export default function Home() {
                   href="https://api.whatsapp.com/send?phone=+919403733265&text=Hello,%20I%20want%20to%20send%20you%20a%20message."
                   target="_blank"
                 >
-                  <i className="fa fa-whatsapp text-xl"></i>
+                  <FaWhatsapp className="text-lg"/>
                 </a>
 
                 <button
                   className="shadow js-clipboard hs-tooltip inline-flex items-center gap-x-2 rounded-lg border border-light bg-transparent px-6 py-4 font-medium text-dark transition [--trigger:focus] hover:bg-light focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-gray-1 dark:text-light/70 dark:hover:bg-dark dark:hover:text-white"
                   type="button"
                 >
-                  <svg
-                    className="h-6 w-6 fill-none stroke-current stroke-[1.5] stroke-linecap-round stroke-linejoin-round"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M8 10a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-8Z" />
-                    <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
-                  </svg>
+                  <MdOutlineEmail />
                   <span>Email</span>
                 </button>
               </div>
               <div className="mt-8 flex flex-wrap items-center gap-2">
                 <a
                   className="shadow flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary"
-                  href="https://www.facebook.com/aashish.bhagwat.5/"
-                  target="_blank"
-                  title="facebook"
-                >
-                  <i className="text-xl fa fa-facebook-square" />
-                </a>
-
-                <a
-                  className="shadow flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary"
-                  href="https://www.instagram.com/aashu.bhagwat/"
-                  target="_blank"
-                  title="instagram"
-                >
-                  <i className="text-xl fa fa-instagram" />
-                </a>
-
-                <a
-                  className="shadow flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary"
-                  href="https://github.com/Aashishb4u"
+                  href="https://github.com/lokeshloki3"
                   target="_blank"
                   title="github"
                 >
-                  <i className="text-xl fa fa-github" />
+                  <FaGithub className="text-xl"/>
                 </a>
 
                 <a
                   className="shadow flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary"
-                  href="https://www.linkedin.com/in/aashish-bhagwat/"
+                  href="https://www.linkedin.com/in/lokesh021loki/"
                   target="_blank"
-                  title="linkedIn"
+                  rel="noopener noreferrer"
+                  title="LinkedIn"
                 >
-                  <i className="text-xl fa fa-linkedin" />
+                  <FaLinkedin className="text-xl" />
+                </a>
+                <a
+                  className="shadow flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 bg-transparent text-center text-slate-600 transition hover:text-primary focus:outline-none focus:ring disabled:pointer-events-none disabled:opacity-50 dark:border-transparent dark:bg-dark-2 dark:text-slate-500 dark:hover:text-primary"
+                  href="https://leetcode.com/u/lokesh11/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="LinkedIn"
+                >
+                  <SiLeetcode className="text-xl" />
                 </a>
               </div>
             </div>
