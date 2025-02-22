@@ -183,7 +183,7 @@ export default function Projects() {
                         href="https://www.e8matrix.com/staging"
                         target="_blank"
                       >
-                        
+                        Elev8 Matrix - US
                       </a>
                     </h3>
                     <p className="text-sm text-muted lg:text-base">
@@ -195,7 +195,7 @@ export default function Projects() {
                     href="https://www.e8matrix.com/staging"
                     target="_blank"
                   >
-                    <span>Visit Site</span>
+                    <span>Visit My Site</span>
                     <svg
                       className="h-4 w-4 shrink-0"
                       fill="none"
