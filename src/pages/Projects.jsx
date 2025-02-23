@@ -195,7 +195,7 @@ export default function Projects() {
                     href="https://www.e8matrix.com/staging"
                     target="_blank"
                   >
-                    <span>Visit My Site</span>
+                    <span>Visit Site</span>
                     <svg
                       className="h-4 w-4 shrink-0"
                       fill="none"
