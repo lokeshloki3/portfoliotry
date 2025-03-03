@@ -187,7 +187,7 @@ export default function Projects() {
                       </a>
                     </h3>
                     <p className="text-sm text-muted lg:text-base">
-                      Marketing Agency 
+                      Marketing Agency | Full Stack Development
                     </p>
                   </div>
                   <a
